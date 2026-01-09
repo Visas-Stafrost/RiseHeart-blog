@@ -1,0 +1,54 @@
+backend:
+  name: github
+  branch: main
+  repo: Visas-Stafrost/RiseHeart-blog
+  base_url: https://api.github.com
+
+media_folder: "static/img/uploads"
+public_folder: "/img/uploads"
+
+collections:
+  - name: "post"
+    label: "博客文章"
+    folder: "content/post"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "描述/副标题", name: "description", widget: "string", required: false}
+      - {label: "发布日期", name: "date", widget: "datetime", format: "2006-01-02"}
+      - {label: "URL 别名", name: "slug", widget: "string"}
+      - {label: "封面图片", name: "image", widget: "image", required: false}
+      - {label: "分类", name: "categories", widget: "list", required: false}
+      - {label: "标签", name: "tags", widget: "list", required: false}
+      - {label: "正文内容", name: "body", widget: "markdown"}
+
+  - name: "page"
+    label: "独立页面"
+    folder: "content/page"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "描述", name: "description", widget: "string", required: false}
+      - {label: "发布日期", name: "date", widget: "datetime", format: "2006-01-02"}
+      - {label: "URL 别名", name: "slug", widget: "string"}
+      - {label: "正文内容", name: "body", widget: "markdown"}
+
+  - name: "settings"
+    label: "站点设置"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "homepage"
+        label: "主页信息"
+        file: "data/homepage.yml"
+        fields:
+          - {label: "网站标题", name: "title", widget: "string"}
+          - {label: "个性签名", name: "subtitle", widget: "string"}
+          - {label: "表情符号", name: "emoji", widget: "string"}
+
+site_url: http://localhost:1313
+display_url: http://localhost:1313
+locale: 'zh_CN'

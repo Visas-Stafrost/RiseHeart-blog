@@ -1,0 +1,425 @@
+/* CMS 深色护眼主题 */
+:root {
+  --bg-primary: #1e1e1e;
+  --bg-secondary: #252526;
+  --bg-tertiary: #2d2d30;
+  --bg-hover: #37373d;
+  --border-color: #3e3e42;
+  --border-light: #454545;
+  --text-primary: #cccccc;
+  --text-secondary: #9d9d9d;
+  --text-muted: #6e6e6e;
+  --accent-color: #569cd6;
+  --accent-hover: #4a8cc7;
+  --success-color: #4ec9b0;
+  --warning-color: #dcdcaa;
+  --error-color: #f48771;
+}
+
+/* 整体背景 */
+body {
+  font-family: "Consolas", "Monaco", "Courier New", monospace, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+  background: var(--bg-primary) !important;
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* 重置所有元素的溢出 */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* 顶部导航栏 */
+.cms-navbar,
+[class*="NavContainer"],
+[class*="AppBar"],
+nav,
+header {
+  background: var(--bg-secondary) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* 主要内容区域容器 */
+#root,
+[class*="App"],
+[class*="Main"],
+main {
+  background: var(--bg-primary) !important;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* 主要内容区域 */
+[class*="MainContent"],
+[class*="Collection"],
+[class*="Editor"],
+[class*="Container"],
+[class*="Wrapper"] {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  margin: 16px;
+  padding: 20px;
+  overflow: visible;
+  max-width: calc(100% - 32px);
+}
+
+/* 侧边栏 */
+[class*="Sidebar"],
+[class*="Nav"] {
+  background: var(--bg-secondary) !important;
+  border-right: 1px solid var(--border-color) !important;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* 侧边栏菜单项 */
+[class*="Sidebar"] [class*="Item"],
+[class*="Nav"] [class*="Item"],
+[class*="NavItem"] {
+  background: transparent !important;
+  color: var(--text-primary) !important;
+  border: none;
+  padding: 12px 16px;
+  margin: 2px 8px;
+  border-radius: 4px;
+  transition: background 0.2s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+[class*="Sidebar"] [class*="Item"]:hover,
+[class*="Nav"] [class*="Item"]:hover,
+[class*="NavItem"]:hover {
+  background: var(--bg-hover) !important;
+}
+
+[class*="Sidebar"] [class*="Item"][class*="Active"],
+[class*="Nav"] [class*="Item"][class*="Active"],
+[class*="NavItem"][class*="Active"] {
+  background: var(--accent-color) !important;
+  color: white !important;
+}
+
+/* 按钮 */
+[class*="Button"],
+button,
+input[type="submit"],
+input[type="button"] {
+  background: var(--accent-color) !important;
+  color: white !important;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+[class*="Button"]:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background: var(--accent-hover) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
+}
+
+[class*="Button"]:active,
+button:active {
+  transform: translateY(0);
+}
+
+/* 输入框 */
+input,
+textarea,
+select,
+[class*="Input"],
+[class*="TextField"],
+[class*="Select"] {
+  background: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 4px !important;
+  padding: 8px 12px !important;
+  transition: all 0.2s ease;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+[class*="Input"]:focus,
+[class*="TextField"]:focus,
+[class*="Select"]:focus {
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 0 0 2px rgba(86, 156, 214, 0.2);
+  outline: none;
+}
+
+/* 标签 */
+label,
+[class*="Label"] {
+  color: var(--text-primary) !important;
+  font-weight: 500;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* 卡片样式 */
+[class*="Card"],
+[class*="ListItem"],
+article {
+  background: var(--bg-tertiary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 12px;
+  transition: all 0.2s ease;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+[class*="Card"]:hover,
+[class*="ListItem"]:hover {
+  border-color: var(--border-light) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 标题文字 */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary) !important;
+  font-weight: 600;
+  margin: 12px 0;
+  overflow-wrap: break-word;
+}
+
+/* 普通文本 */
+p, span, div {
+  color: var(--text-primary);
+  overflow-wrap: break-word;
+}
+
+/* 标签 */
+[class*="Tag"],
+[class*="Badge"],
+[class*="LabelBadge"] {
+  background: var(--accent-color) !important;
+  color: white !important;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+  margin: 2px;
+}
+
+/* 编辑器工具栏 */
+[class*="EditorToolbar"],
+[class*="Toolbar"] {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 8px;
+  overflow: visible;
+}
+
+/* Markdown 编辑器 */
+[class*="MarkdownEditor"],
+[class*="CodeMirror"],
+textarea[class*="editor"] {
+  font-family: "Consolas", "Monaco", "Courier New", monospace !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  background: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 4px !important;
+  padding: 12px !important;
+  min-height: 400px;
+  overflow: auto;
+  max-width: 100%;
+}
+
+/* 预览区域 */
+[class*="PreviewPane"],
+[class*="Preview"] {
+  background: var(--bg-tertiary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 4px;
+  padding: 20px;
+  overflow: auto;
+  max-width: 100%;
+}
+
+/* 表格 */
+table {
+  background: var(--bg-tertiary) !important;
+  border-collapse: collapse;
+  width: 100%;
+  overflow: auto;
+}
+
+th, td {
+  border: 1px solid var(--border-color);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+th {
+  background: var(--bg-hover) !important;
+  color: var(--text-primary);
+}
+
+td {
+  background: var(--bg-tertiary) !important;
+  color: var(--text-primary);
+}
+
+/* 链接 */
+a {
+  color: var(--accent-color) !important;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--accent-hover) !important;
+  text-decoration: underline;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-light);
+  border-radius: 6px;
+  border: 2px solid var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Logo 样式 */
+[class*="Logo"],
+[class*="Brand"] {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent-color) !important;
+}
+
+/* 下拉菜单 */
+[class*="Dropdown"],
+[class*="SelectMenu"] {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+[class*="Dropdown"] [class*="Item"],
+[class*="SelectMenu"] [class*="Item"] {
+  background: transparent !important;
+  color: var(--text-primary) !important;
+  padding: 8px 16px;
+}
+
+[class*="Dropdown"] [class*="Item"]:hover,
+[class*="SelectMenu"] [class*="Item"]:hover {
+  background: var(--bg-hover) !important;
+}
+
+/* 模态框 */
+[class*="Modal"],
+[class*="Dialog"] {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* 加载动画 */
+[class*="Loader"],
+[class*="Spinner"] {
+  border-color: var(--border-color);
+  border-top-color: var(--accent-color);
+}
+
+/* 代码块 */
+code, pre {
+  background: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-family: "Consolas", "Monaco", "Courier New", monospace !important;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* 确保所有图片不会溢出 */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 列表 */
+ul, ol {
+  color: var(--text-primary);
+  margin: 8px 0;
+  padding-left: 24px;
+}
+
+li {
+  margin: 4px 0;
+  color: var(--text-primary);
+}
+
+/* 分隔线 */
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 16px 0;
+}
+
+/* 工具提示 */
+[class*="Tooltip"] {
+  background: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 8px 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* 确保内容不会溢出视口 */
+@media (max-width: 768px) {
+  [class*="MainContent"],
+  [class*="Collection"],
+  [class*="Editor"],
+  [class*="Container"] {
+    margin: 8px;
+    padding: 12px;
+    max-width: calc(100% - 16px);
+  }
+}
