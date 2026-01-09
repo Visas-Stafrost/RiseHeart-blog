@@ -1,8 +1,6 @@
 backend:
-  name: github
+  name: git-gateway
   branch: main
-  repo: Visas-Stafrost/RiseHeart-blog
-  base_url: https://api.github.com
 
 media_folder: "static/img/uploads"
 public_folder: "/img/uploads"
@@ -49,6 +47,6 @@ collections:
           - {label: "个性签名", name: "subtitle", widget: "string"}
           - {label: "表情符号", name: "emoji", widget: "string"}
 
-site_url: http://localhost:1313
-display_url: http://localhost:1313
+site_url: https://riseheart-blog.netlify.app
+display_url: https://riseheart-blog.netlify.app
 locale: 'zh_CN'

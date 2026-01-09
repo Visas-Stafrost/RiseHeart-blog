@@ -1,0 +1,21 @@
+[build]
+  publish = "public"
+  command = "hugo --gc"
+
+[build.environment]
+  HUGO_VERSION = "0.152.2"
+  HUGO_THEME = "hugo-theme-stack"
+
+[context.production]
+  command = "hugo --gc --minify"
+  [context.production.environment]
+    HUGO_ENV = "production"
+
+[context.deploy-preview]
+  command = "hugo --gc -b ${DEPLOY_PRIME_URL}"
+
+[[redirects]]
+  from = "https://riseheart-blog.netlify.app/*"
+  to = "https://riseheart-blog.com/:splat"
+  status = 301
+  force = true
