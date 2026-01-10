@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on RiseHeart</title>
-        <link>http://localhost:61943/en/tags/</link>
+        <link>http://localhost:61943/RiseHeart-blog/en/tags/</link>
         <description>Recent content in Tags on RiseHeart</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <copyright>跃升之心-RiseHeart</copyright><atom:link href="http://localhost:61943/en/tags/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>跃升之心-RiseHeart</copyright><atom:link href="http://localhost:61943/RiseHeart-blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>
