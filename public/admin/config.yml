@@ -1,6 +1,7 @@
 backend:
-  name: git-gateway
+  name: github
   branch: main
+  repo: Visas-Stafrost/Visas-Stafrost.github.io
 
 media_folder: "static/img/uploads"
 public_folder: "/img/uploads"
@@ -47,6 +48,6 @@ collections:
           - {label: "个性签名", name: "subtitle", widget: "string"}
           - {label: "表情符号", name: "emoji", widget: "string"}
 
-site_url: https://visas-stafrost.github.io/RiseHeart-blog
-display_url: https://visas-stafrost.github.io/RiseHeart-blog
+site_url: https://visas-stafrost.github.io
+display_url: https://visas-stafrost.github.io
 locale: 'zh_CN'

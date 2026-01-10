@@ -1,6 +1,7 @@
 backend:
-  name: git-gateway
+  name: github
   branch: main
+  repo: Visas-Stafrost/Visas-Stafrost.github.io
 
 media_folder: "static/img/uploads"
 public_folder: "/img/uploads"
