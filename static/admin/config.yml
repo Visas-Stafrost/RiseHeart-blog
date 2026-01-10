@@ -47,6 +47,6 @@ collections:
           - {label: "个性签名", name: "subtitle", widget: "string"}
           - {label: "表情符号", name: "emoji", widget: "string"}
 
-site_url: https://visas-stafrost.github.io
-display_url: https://visas-stafrost.github.io
+site_url: https://visas-stafrost.netlify.app
+display_url: https://visas-stafrost.netlify.app
 locale: 'zh_CN'
