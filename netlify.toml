@@ -1,0 +1,13 @@
+[build]
+  publish = "public"
+  command = "hugo --gc --minify"
+
+[build.environment]
+  HUGO_VERSION = "0.152.2"
+  HUGO_THEME = "hugo-theme-stack"
+
+[[redirects]]
+  from = "https://visas-stafrost.github.io/*"
+  to = "https://riseheart-blog.netlify.app/:splat"
+  status = 301
+  force = true
